@@ -45,7 +45,7 @@
 
                             <ul>
                                 <li class="mb-2">
-                                    <h6 class="subtitle mb-0"><span>Paymen Method</span><span>{{ $transactions->paymentMethod->name }}</span></h6>
+                                    <h6 class="subtitle mb-0"><span>Payment Method</span><span>{{ $transactions->paymentMethod->name }}</span></h6>
                                 </li>
                                 <li class="mb-2">
                                     <h6 class="subtitle mb-0"><span>Total Amount</span><span>Rp {{ number_format($transactions->price + $transactions->tax, 0, ',', '.') }},-</span></h6>

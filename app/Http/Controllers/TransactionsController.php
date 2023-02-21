@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Transactions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class TransactionsController extends Controller
@@ -42,6 +43,18 @@ class TransactionsController extends Controller
         $transactions->status = $request->status;
         $transactions->printed = $request->printed;
         $transactions->save();
+
+        if($request->status == 'Payment Received') {
+            $user = $transactions->users->email;
+            $url = url('ticket-detail/'.$transactions->transaction_id);
+            $message = "<p>Hi {$transactions->users->name}, Thank you for order ticket in Bisokop, here your ticket detail url <a href='{$url}'>{$url}</a></p>";
+            Mail::send([], [], function($mail) use($user, $message) {
+                $mail->from(env('MAIL_USERNAME'), env('MAIL_FROM_NAME'))
+                    ->to($user)
+                    ->subject('Bisokop Ticket Detail')
+                    ->setBody($message, 'text/html');
+            });
+        }
 
         return redirect('/staff/transactions/')->with('alertSuccess', 'Transaction updated successfully.');
     }
