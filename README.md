@@ -1,3 +1,16 @@
+# Bisokop
+
+Bisokop adalah platform online yang memungkinkan pengguna untuk membeli tiket bioskop secara online. Pengguna dapat memilih film yang ingin ditonton, memilih tanggal dan waktu tayang, dan membeli tiket dengan menggunakan metode pembayaran yang beragam, seperti kartu debit atau layanan pembayaran digital lainnya.
+
+## Instalasi
+
+- Clone the repository `git clone https://github.com/rgsannn/Bisokop`
+- Install dependencies using the compposer. For example run `composer install`
+- Copy file .env.example `cp .env.example .env` 
+- Create database and change the .env file then adjust with your database
+- Migrate database `php artisan migrate`
+- Run Script `php artisan serve`
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
