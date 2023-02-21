@@ -5,11 +5,12 @@ Bisokop adalah platform online yang memungkinkan pengguna untuk membeli tiket bi
 ## Instalasi
 
 - Clone the repository `git clone https://github.com/rgsannn/Bisokop`
-- Install dependencies using the compposer. For example run `composer install`
+- Install dependencies using the composer. For example run `composer install`
 - Copy file .env.example `cp .env.example .env` 
 - Create database and change the .env file then adjust with your database
 - Settings the mailer in .env file
 - Migrate database `php artisan migrate`
+- if `php artisan migrate` error you can export the database file [database_bisokop.sql](database_bisokop.sql) manual in phpmyadmin
 - Run Script `php artisan serve`
 - Open `http://127.0.0.1:8000`
 
