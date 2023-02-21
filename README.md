@@ -8,6 +8,7 @@ Bisokop adalah platform online yang memungkinkan pengguna untuk membeli tiket bi
 - Install dependencies using the compposer. For example run `composer install`
 - Copy file .env.example `cp .env.example .env` 
 - Create database and change the .env file then adjust with your database
+- Settings the mailer in .env file
 - Migrate database `php artisan migrate`
 - Run Script `php artisan serve`
 
