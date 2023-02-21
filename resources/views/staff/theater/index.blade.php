@@ -97,7 +97,7 @@
                     <table class="table" id="SannTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th class="text-nowrap">ID Theater</th>
+                                <th class="text-nowrap">Theater ID</th>
                                 <th class="text-nowrap">Name</th>
                                 <th class="text-nowrap">Type</th>
                                 <th class="text-center">Action</th>
