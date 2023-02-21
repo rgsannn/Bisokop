@@ -45,12 +45,12 @@ class TransactionsController extends Controller
         $transactions->save();
 
         if($request->status == 'Payment Received') {
-            $user = $transactions->users->email;
+            $email = $transactions->users->email;
             $url = url('ticket-detail/'.$transactions->transaction_id);
             $message = "<p>Hi {$transactions->users->name}, Thank you for order ticket in Bisokop, here your ticket detail url <a href='{$url}'>{$url}</a></p>";
-            Mail::send([], [], function($mail) use($user, $message) {
+            Mail::send([], [], function($mail) use($email, $message) {
                 $mail->from(env('MAIL_USERNAME'), env('MAIL_FROM_NAME'))
-                    ->to($user)
+                    ->to($email)
                     ->subject('Bisokop Ticket Detail')
                     ->setBody($message, 'text/html');
             });
