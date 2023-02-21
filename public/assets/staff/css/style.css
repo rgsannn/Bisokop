@@ -1,0 +1,7 @@
+.card-header {
+    border-bottom: 1px solid rgba(34,41,47,.125);
+}
+
+.card .card-header+.card-body, .card .card-header+.card-content>.card-body:first-of-type {
+    padding-top: 1.5rem;
+}
