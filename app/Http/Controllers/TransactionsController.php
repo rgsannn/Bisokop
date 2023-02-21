@@ -44,7 +44,7 @@ class TransactionsController extends Controller
         $transactions->printed = $request->printed;
         $transactions->save();
 
-        if($request->status == 'Payment Received') {
+        if($request->status == 'Payment Received' && $transactions->status !== 'Payment Received') {
             $email = $transactions->users->email;
             $url = url('ticket-detail/'.$transactions->transaction_id);
             $message = "<p>Hi {$transactions->users->name}, Thank you for order ticket in Bisokop, here your ticket detail url <a href='{$url}'>{$url}</a></p>";
