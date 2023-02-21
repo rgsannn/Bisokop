@@ -14,6 +14,20 @@ Bisokop adalah platform online yang memungkinkan pengguna untuk membeli tiket bi
 - Run Script `php artisan serve`
 - Open `http://127.0.0.1:8000`
 
+## Website
+
+- Customer URL : `http://127.0.0.1:8000/`
+- Staff URL : `http://127.0.0.1:8000/staff`
+
+Default Account Staff :
+- Admin
+    - Email : admin@bisokop.im-rgsan.com
+    - Password: admin123
+
+- Cashier
+    - Email : cashier@bisokop.im-rgsan.com
+    - Password: cashier123
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
