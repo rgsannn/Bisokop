@@ -74,7 +74,7 @@
 						data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<div class="user-nav d-sm-flex d-none">
 							<span class="user-name fw-bolder">{{ $user->name }}</span>
-							<span class="user-status">Admin</span>
+							<span class="user-status">{{ $user->role }}</span>
 						</div>
 						<span class="avatar">
 							<img class="round" src="{{ url('assets/staff') }}/images/portrait/small/avatar-s-11.jpg" alt="avatar"
