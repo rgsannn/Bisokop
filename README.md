@@ -8,7 +8,24 @@ Bisokop adalah platform online yang memungkinkan pengguna untuk membeli tiket bi
 - Install dependencies using the composer. For example run `composer install`
 - Copy file .env.example `cp .env.example .env` 
 - Create database and change the .env file then adjust with your database
+
+    ```
+    DB_DATABASE=your-database-name
+    DB_USERNAME=your-username-database
+    DB_PASSWORD=your-password-database
+    ```
 - Settings the mailer in .env file
+
+    ```
+    MAIL_MAILER=smtp
+    MAIL_HOST=mailhog
+    MAIL_PORT=1025
+    MAIL_USERNAME=null
+    MAIL_PASSWORD=null
+    MAIL_ENCRYPTION=null
+    MAIL_FROM_ADDRESS=null
+    MAIL_FROM_NAME="${APP_NAME} Support"
+    ```
 - Migrate database `php artisan migrate`
 - if `php artisan migrate` error you can export the database file [database_bisokop.sql](database_bisokop.sql) manual in phpmyadmin
 - Run Script `php artisan serve`
